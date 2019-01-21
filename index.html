@@ -12,9 +12,8 @@
     <nav role='navigation' class='nav-bar'>
         <span class='nav-brand nav-left'>eHawaii.gov</span>
         <ul class='nav-links'>
-            <li class='nav-link nav-right'>Home</li>
-            <li class='nav-link nav-right'>Blog</li>
-            <li class='nav-link nav-right'>MyAccount</li>
+            <li class='nav-link nav-right'><a href=''>Home | </a></li>
+            <li class='nav-link nav-right'><a href=''>MyAccount</a></li>
         </ul>
     </nav>
 
@@ -54,9 +53,9 @@
                 <span class="test-close close">&times;</span>
                 <h2 class='modal-header'>Select Test Alert</h2>
                 <ul class='test-options'>
-                    <li class='selected test-option'>This is a test of the emergency alert system.</li>
+                    <li class='test-option'>This is a test of the emergency alert system.</li>
                 </ul>
-                <button id='send-test' role='button' class='test-button'>Send Alert</button>
+                <button role='button' class='send-warning test-button'>Send Alert</button>
             </section>
         </div>
         <div id='warning-modal' class='modal hidden'>
@@ -68,9 +67,9 @@
                     <li class='test-option'>Potential tsunami alert.</li>
                     <li class='test-option'>Minor volcano activity alert.</li>
                     <li class='test-option'>Nearby storm alert.</li>
-                    <li class='select test-option'>Herd of angry turtles alert.</li>
+                    <li class='test-option'>Herd of angry turtles alert.</li>
                 </ul>
-                <button id='send-warning' role='button' class='warning-button'>Send Alert</button>
+                <button role='button' class='send-warning warning-button'>Send Alert</button>
             </section>
         </div>
         <div id='emergency-modal' class='modal hidden'>
@@ -78,13 +77,13 @@
                 <span class="emergency-close close">&times;</span>
                 <h2 class='modal-header'>Select Emergency Alert</h2>
                 <ul class='test-options'>
-                    <li class='selected test-option'>Mainland earthquake alert.</li>
+                    <li class='test-option'>Mainland earthquake alert.</li>
                     <li class='test-option'>Coastal earthquake alert.</li>
                     <li class='test-option'>Monsoon alert.</li>
                     <li class='test-option'>Active volcano alert.</li>
                     <li class='test-option'>Tsunami alert.</li>
                 </ul>
-                <button id='send-emergency' role='button' class='danger-button'>Send Alert</button>
+                <button role='button' class='send-warning danger-button'>Send Alert</button>
             </section>
         </div>
     </main>

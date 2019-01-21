@@ -1,7 +1,7 @@
 html,
 body {
     min-height: 100vh;
-    min-width: 100%;
+    min-width: 100vw;
     margin: 0;
     padding: 0;
     font-size: 18px;
@@ -22,12 +22,17 @@ body {
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+    color: initial;
+}
+
 .hidden {
     display: none;
 }
 
 nav {
-    width: inherit;
+    width: 100vw;
     height: 60px;
     display: flex;
     flex-direction: row;
@@ -74,6 +79,10 @@ nav {
     margin: 10px auto;
     background-color: white;
     border-radius: 5px;
+}
+.card:hover {
+    height: 500px;
+    width: 320px;
 }
 
 .card-header {
@@ -192,6 +201,24 @@ button {
     border-radius: 5px;
 }
 
+.test-option:hover {
+    background-color: greenyellow;
+}
+
 .selected {
     background-color: greenyellow;
+}
+
+@media screen and (max-width: 320px) {
+    nav {
+        font-size: 1em;
+    }
+    .nav-link{
+        padding: 2px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .container {
+        max-width: 100vw;
+    }
 }
