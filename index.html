@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>eHawaii.gov | Emergency Alert System</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+</head>
+<body>
+    <nav role='navigation' class='nav-bar'>
+        <span class='nav-brand nav-left'>eHawaii.gov</span>
+        <ul class='nav-links'>
+            <li class='nav-link nav-right'>Home</li>
+            <li class='nav-link nav-right'>Blog</li>
+            <li class='nav-link nav-right'>MyAccount</li>
+        </ul>
+    </nav>
+
+    <!--Alert cards-->
+    <main role='main' class='container'>
+        <section class='test-alerts card'>
+            <h2 class='card-header'>Test Alerts</h2>
+            <div class='card-content'>
+                <i class="fas fa-thumbs-up icon" style='color: lightskyblue'></i>
+                <p>Use these alerts to test the readiness of the emergency alert system.</p>
+                <p>In the case of a real emergency do <strong>not</strong> use these alerts.</p>
+                <button role='button' class='test-button js-test-button'>Send <strong>test</strong> alert</button>
+            </div>
+        </section>
+        <section class='warning-alerts card'>
+            <h2 class='card-header'>Warning Alerts</h2>
+            <div class='card-content'>
+                <i class="fas fa-exclamation-circle icon" style='color: yellow'></i>
+                <p>Use these alerts to warn people before an emergency becomes a threat.</p>
+                <p>If there is an immediate danger use the <strong>Emergency Alerts</strong>.</strong></p>
+                <button role='button' class='warning-button js-warning-button'>Send <strong>warning</strong> alert</button>
+            </div>
+        </section>
+        <section class='danger-alerts card'>
+            <h2 class='card-header'>Emergency Alerts</h2>
+            <div class='card-content'>
+                <i class="fas fa-radiation icon" style='color: red'></i>
+                <p>Use these alerts to notify people to get to safety in the event of an emergency.</p>
+                <p>Only send these alerts if there is an <strong>immediate</strong> threat to the population.</p>
+                <button role='button' class='danger-button js-danger-button'>Send <strong>emergency</strong> alert</button>
+            </div>
+        </section>
+
+        <!--Modal designs. Hidden by default-->
+        <div id='test-modal' class='modal hidden'>
+            <section class='test-modal-content modal-content'>
+                <span class="test-close close">&times;</span>
+                <h2 class='modal-header'>Select Test Alert</h2>
+                <ul class='test-options'>
+                    <li class='selected test-option'>This is a test of the emergency alert system.</li>
+                </ul>
+                <button id='send-test' role='button' class='test-button'>Send Alert</button>
+            </section>
+        </div>
+        <div id='warning-modal' class='modal hidden'>
+            <section class='warning-modal-content modal-content'>
+                <span class="warning-close close">&times;</span>
+                <h2 class='modal-header'>Select Warning Alert</h2>
+                <ul class='test-options'>
+                    <li class='test-option'>Amber alert.</li>
+                    <li class='test-option'>Potential tsunami alert.</li>
+                    <li class='test-option'>Minor volcano activity alert.</li>
+                    <li class='test-option'>Nearby storm alert.</li>
+                    <li class='select test-option'>Herd of angry turtles alert.</li>
+                </ul>
+                <button id='send-warning' role='button' class='warning-button'>Send Alert</button>
+            </section>
+        </div>
+        <div id='emergency-modal' class='modal hidden'>
+            <section class='emergency-modal-content modal-content'>
+                <span class="emergency-close close">&times;</span>
+                <h2 class='modal-header'>Select Emergency Alert</h2>
+                <ul class='test-options'>
+                    <li class='selected test-option'>Mainland earthquake alert.</li>
+                    <li class='test-option'>Coastal earthquake alert.</li>
+                    <li class='test-option'>Monsoon alert.</li>
+                    <li class='test-option'>Active volcano alert.</li>
+                    <li class='test-option'>Tsunami alert.</li>
+                </ul>
+                <button id='send-emergency' role='button' class='danger-button'>Send Alert</button>
+            </section>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>
